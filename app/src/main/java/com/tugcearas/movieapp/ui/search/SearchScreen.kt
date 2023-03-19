@@ -41,11 +41,11 @@ class SearchScreen : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.searchToolbar.customToolbar.navigationIcon = null
         search()
         initObserve()
         clickCancelButton()
         clickClearButton()
+        clickBackButton()
     }
 
     private fun search() {
@@ -104,6 +104,13 @@ class SearchScreen : Fragment() {
         }
 
         // TODO : Delete operation for screen
+    }
+
+    private fun clickBackButton(){
+        binding.searchToolbar.customToolbar.setNavigationOnClickListener {
+           val action = SearchScreenDirections.actionSearchScreenToPopularMovieScreen()
+            findNavController().navigate(action)
+        }
     }
 
     private fun onSearchClick(movie: MovieModel) {
