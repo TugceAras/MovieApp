@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.tugcearas.movieapp.R
 import com.tugcearas.movieapp.databinding.FragmentFavoriteScreenBinding
 import com.tugcearas.movieapp.ui.favorite.adapter.FavoriteAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,12 +39,12 @@ class FavoriteScreen : Fragment() {
         binding.favRecyclerview.adapter = favAdapter
         favAdapter.onDeleteClick = {
             AlertDialog.Builder(requireContext())
-                .setTitle("Delete Movie")
-                .setMessage("Do you want to delete this movie?")
-                .setPositiveButton("Yes"){ _ , _, ->
+                .setTitle(getString(R.string.alert_dialog_title))
+                .setMessage(getString(R.string.alert_dialog_message))
+                .setPositiveButton(getString(R.string.alert_dialog_positive)){ _ , _, ->
                     favoriteViewModel.deleteMovieFromFavorites(it)
                 }
-                .setNegativeButton("Cancel",null)
+                .setNegativeButton(getString(R.string.alert_dialog_negative),null)
                 .show()
         }
     }

@@ -39,12 +39,12 @@ class WatchlistScreen : Fragment() {
         binding.watchlistRecyclerview.adapter = watchlistAdapter
         watchlistAdapter.onDeleteClick ={
             AlertDialog.Builder(requireContext())
-                .setTitle("Delete Movie")
-                .setMessage("Do you want to delete this movie?")
-                .setPositiveButton("Yes"){_,_,->
+                .setTitle(getString(R.string.alert_dialog_title))
+                .setMessage(getString(R.string.alert_dialog_message))
+                .setPositiveButton(getString(R.string.alert_dialog_positive)){_,_,->
                     watchlistViewModel.deleteMovieFromWatchlist(it)
                 }
-                .setNegativeButton("Cancel",null)
+                .setNegativeButton(getString(R.string.alert_dialog_negative),null)
                 .show()
         }
     }
