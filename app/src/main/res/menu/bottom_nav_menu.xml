@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/popularMovieScreen"
+        android:icon="@drawable/search_movie_icon"
+        app:showAsAction="ifRoom"
+        android:title="Movies"/>
+
+    <item
+        android:id="@+id/searchScreen"
+        android:icon="@drawable/search_icon"
+        app:showAsAction="ifRoom"
+        android:title="@string/search"
+        />
+
+    <item
+        android:id="@+id/watchlistScreen"
+        android:icon="@drawable/watchlist_icon"
+        app:showAsAction="ifRoom"
+        android:title="@string/watchlist"
+        />
+
+    <item
+        android:id="@+id/favoriteScreen"
+        android:icon="@drawable/fav_icon"
+        app:showAsAction="ifRoom"
+        android:title="@string/favorite"
+        />
+</menu>

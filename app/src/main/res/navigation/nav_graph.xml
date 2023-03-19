@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.tugcearas.movieapp.ui.splash.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.tugcearas.movieapp.ui.login.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreen_to_popularMovieScreen"
+            app:destination="@id/popularMovieScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchScreen"
+        android:name="com.tugcearas.movieapp.ui.search.SearchScreen"
+        android:label="fragment_search_screen"
+        tools:layout="@layout/fragment_search_screen" >
+        <action
+            android:id="@+id/action_searchScreen_to_detailScreen"
+            app:destination="@id/detailScreen" />
+        <action
+            android:id="@+id/action_searchScreen_to_watchlistScreen"
+            app:destination="@id/watchlistScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailScreen"
+        android:name="com.tugcearas.movieapp.ui.detail.DetailScreen"
+        android:label="fragment_detail_screen"
+        tools:layout="@layout/fragment_detail_screen" >
+        <action
+            android:id="@+id/action_detailScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+        <argument
+            android:name="movie"
+            app:argType="com.tugcearas.movieapp.data.model.movie.MovieModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchlistScreen"
+        android:name="com.tugcearas.movieapp.ui.watchlist.WatchlistScreen"
+        android:label="fragment_watchlist_screen"
+        tools:layout="@layout/fragment_watchlist_screen" >
+        <action
+            android:id="@+id/action_watchlistScreen_to_favoriteScreen"
+            app:destination="@id/favoriteScreen" />
+        <action
+            android:id="@+id/action_watchlistScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteScreen"
+        android:name="com.tugcearas.movieapp.ui.favorite.FavoriteScreen"
+        android:label="fragment_favorite_screen"
+        tools:layout="@layout/fragment_favorite_screen" >
+        <action
+            android:id="@+id/action_favoriteScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularMovieScreen"
+        android:name="com.tugcearas.movieapp.ui.popular.PopularMovieScreen"
+        android:label="fragment_popular_movie_screen"
+        tools:layout="@layout/fragment_popular_movie_screen" >
+        <action
+            android:id="@+id/action_popularMovieScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+    </fragment>
+</navigation>

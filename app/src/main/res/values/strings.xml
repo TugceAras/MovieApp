@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="the_movie_manager">The Movie Manager</string>
+    <string name="this_product_uses_the_tmdb_api_but_is_not_n_endorsed_or_certified_by_tmdb">This product uses the TMDb API but is not\n endorsed or certified by TMDb</string>
+    <string name="login_via_website">Login via Website</string>
+    <string name="or">OR</string>
+    <string name="login">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="check_username">Please enter your username!</string>
+    <string name="check_password">Please enter your password!</string>
+    <string name="search">Search</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="favorite">Favorite</string>
+    <string name="cancel">Cancel</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_date">Movie date</string>
+    <string name="popular_movie">Popular Movies</string>
+    <string name="favorites">Favorites</string>
+</resources>
