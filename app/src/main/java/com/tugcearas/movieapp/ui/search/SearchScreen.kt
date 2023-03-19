@@ -105,8 +105,6 @@ class SearchScreen : Fragment() {
                 searchEditText.setText("")
             }
         }
-
-        // TODO : Delete operation for screen
     }
 
     private fun clickBackButton(){

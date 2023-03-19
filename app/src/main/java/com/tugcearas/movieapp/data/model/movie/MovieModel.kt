@@ -11,11 +11,11 @@ data class Movies(
 
 @Parcelize
 data class MovieModel(
-    val id: Int,
-    val page: Int,
-    val overview: String,
-    val title: String,
+    val id: Int?,
+    val page: Int?,
+    val overview: String?,
+    val title: String?,
     @SerializedName("poster_path") val posterPath: String?,
-    @SerializedName("release_date") val releaseDate: String,
-    @SerializedName("vote_average") val voteAverage: Double
+    @SerializedName("release_date") val releaseDate: String?,
+    @SerializedName("vote_average") val voteAverage: Double?
 ) : Parcelable

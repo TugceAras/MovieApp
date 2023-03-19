@@ -34,7 +34,7 @@ class DetailVM @Inject constructor(
     fun addMovieToFavorite() = viewModelScope.launch {
         _movie.value?.let {
             movieRepo.addMovieToFavorite(
-                FavoriteModel(it.id,it.posterPath!!,it.title)
+                FavoriteModel(it.id!!,it.posterPath!!,it.title!!)
             )
         }
     }
@@ -42,7 +42,7 @@ class DetailVM @Inject constructor(
     fun addMovieToWatchlist() = viewModelScope.launch {
         _movie.value?.let {
             movieRepo.addMovieToWatchlist(
-                WatchlistModel(it.id,it.posterPath!!,it.title)
+                WatchlistModel(it.id!!,it.posterPath!!,it.title!!)
             )
         }
     }
