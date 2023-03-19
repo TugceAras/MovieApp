@@ -28,9 +28,9 @@ ListAdapter<WatchlistModel, WatchlistAdapter.WatchlistViewHolder>(
     }
 
     inner class WatchlistViewHolder(val binding: WatchlistItemBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(movie:WatchlistModel){
-            binding.movie = movie
-            binding.executePendingBindings()
+        fun bind(watchlistMovie:WatchlistModel) = with(binding){
+            movie = watchlistMovie
+            executePendingBindings()
         }
     }
 }

@@ -29,7 +29,6 @@ class SearchAdapter(private var onSearchClick: (MovieModel) -> Unit) :
 
     inner class SearchViewHolder(private val binding: SearchItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-
         fun bind(movie: MovieModel) = with(binding) {
             movieTitle.text = movie.title
             movieDate.text = movie.releaseDate

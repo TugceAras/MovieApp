@@ -85,9 +85,12 @@ class SearchScreen : Fragment() {
     }
 
     private fun clickCancelButton(){
-        binding.cancelButton.setOnClickListener {
-            binding.cancelButton.gone()
-            it.hideKeyboard()
+        binding.cancelButton.click {
+            with(binding){
+                cancelButton.gone()
+                searchEditText.setText("")
+            }
+            requireView().hideKeyboard()
         }
     }
 

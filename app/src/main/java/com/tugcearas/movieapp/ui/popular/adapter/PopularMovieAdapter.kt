@@ -32,9 +32,10 @@ class PopularMovieAdapter: ListAdapter<MovieModel, PopularMovieAdapter.PopularMo
     inner class PopularMovieViewHolder(private val binding:PopularMovieItemBinding)
         :RecyclerView.ViewHolder(binding.root) {
         fun bind(movie:MovieModel) {
-
-            binding.movieTitle.text = movie.title
-            binding.date.text = movie.releaseDate
+            with(binding){
+                movieTitle.text = movie.title
+                date.text = movie.releaseDate
+            }
             Glide.with(itemView)
                 .load(Constants.IMAGE_URL + movie.posterPath)
                 .into(binding.movieImage)

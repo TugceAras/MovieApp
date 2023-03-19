@@ -21,5 +21,4 @@ interface MovieDao {
 
     @Query("SELECT * FROM watchlistTable")
     suspend fun getWatchlistMovie():List<WatchlistModel>
-
 }

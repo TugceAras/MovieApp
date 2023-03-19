@@ -28,9 +28,9 @@ ListAdapter<FavoriteModel, FavoriteAdapter.FavoriteViewHolder>(
     }
 
     inner class FavoriteViewHolder(val binding:FavoriteItemBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(movie:FavoriteModel){
-            binding.movie = movie
-            binding.executePendingBindings()
+        fun bind(favMovie:FavoriteModel) = with(binding){
+            movie = favMovie
+            executePendingBindings()
         }
     }
 }
