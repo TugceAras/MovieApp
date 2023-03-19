@@ -7,9 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tugcearas.movieapp.data.model.movie.FavoriteModel
 import com.tugcearas.movieapp.databinding.FavoriteItemBinding
 import com.tugcearas.movieapp.util.diffutil.DiffUtilCallback
+import com.tugcearas.movieapp.util.extensions.click
 
-class FavoriteAdapter:
-ListAdapter<FavoriteModel, FavoriteAdapter.FavoriteViewHolder>(
+class FavoriteAdapter(
+    var onDeleteClick: (Int)->Unit={}
+): ListAdapter<FavoriteModel, FavoriteAdapter.FavoriteViewHolder>(
     DiffUtilCallback<FavoriteModel>(
         itemsTheSame = { oldItem, newItem ->
             oldItem == newItem
@@ -31,6 +33,9 @@ ListAdapter<FavoriteModel, FavoriteAdapter.FavoriteViewHolder>(
         fun bind(favMovie:FavoriteModel) = with(binding){
             movie = favMovie
             executePendingBindings()
+            deleteButton.click {
+                onDeleteClick(favMovie.id)
+            }
         }
     }
 }

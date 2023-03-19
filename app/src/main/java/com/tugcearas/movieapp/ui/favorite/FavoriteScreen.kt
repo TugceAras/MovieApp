@@ -1,5 +1,6 @@
 package com.tugcearas.movieapp.ui.favorite
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.tugcearas.movieapp.R
 import com.tugcearas.movieapp.databinding.FragmentFavoriteScreenBinding
 import com.tugcearas.movieapp.ui.favorite.adapter.FavoriteAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,6 +36,16 @@ class FavoriteScreen : Fragment() {
 
     private fun initAdapter(){
         binding.favRecyclerview.adapter = favAdapter
+        favAdapter.onDeleteClick = {
+            AlertDialog.Builder(requireContext())
+                .setTitle("Delete Movie")
+                .setMessage("Do you want to delete this movie?")
+                .setPositiveButton("Yes"){ _ , _, ->
+                    favoriteViewModel.deleteMovieFromFavorites(it)
+                }
+                .setNegativeButton("Cancel",null)
+                .show()
+        }
     }
 
     private fun initObserve(){

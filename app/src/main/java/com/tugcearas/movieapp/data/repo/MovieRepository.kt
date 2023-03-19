@@ -32,6 +32,10 @@ class MovieRepository @Inject constructor(
         return movieDb.getFavoriteMovie()
     }
 
+    suspend fun deleteMovieFromFavorites(favId:Int){
+        movieDb.deleteMovieFromFavorites(favId)
+    }
+
     suspend fun addMovieToWatchlist(movie:WatchlistModel){
         movieDb.addMovieToWatchlist(movie)
     }

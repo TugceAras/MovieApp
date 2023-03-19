@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class FavoriteVM @Inject constructor(val movieRepo:MovieRepository): ViewModel() {
+class FavoriteVM @Inject constructor(private val movieRepo:MovieRepository): ViewModel() {
 
     val getFavoriteMovies : MutableLiveData<List<FavoriteModel>> = MutableLiveData()
 
@@ -20,5 +20,10 @@ class FavoriteVM @Inject constructor(val movieRepo:MovieRepository): ViewModel()
 
     private fun getFavorites() = viewModelScope.launch {
         getFavoriteMovies.postValue(movieRepo.getMovieToFavorite())
+    }
+
+    fun deleteMovieFromFavorites(favId:Int) = viewModelScope.launch {
+        movieRepo.deleteMovieFromFavorites(favId)
+        getFavorites()
     }
 }

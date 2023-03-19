@@ -16,6 +16,9 @@ interface MovieDao {
     @Query("SELECT * FROM favTable")
     suspend fun getFavoriteMovie():List<FavoriteModel>
 
+    @Query("DELETE FROM favTable WHERE id=:favId")
+    suspend fun deleteMovieFromFavorites(favId:Int)
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addMovieToWatchlist(movie:WatchlistModel)
 
