@@ -44,60 +44,80 @@
             android:layout_height="wrap_content"
             android:text="@string/login"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/logo_subtitle"
             android:layout_marginTop="80dp" />
 
-        <EditText
-            android:id="@+id/username_et"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username_layout"
             android:layout_width="330dp"
-            android:layout_height="32dp"
-            android:layout_marginTop="20dp"
-            android:background="@color/piction_blue"
-            android:hint="@string/username"
-            android:text="@={login.username}"
-            android:padding="4dp"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:singleLine="true"
-            android:textColorHint="@color/battleship_grey"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/login_title"
-            tools:ignore="Autofill,TextFields" />
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+           >
 
-        <EditText
-            android:id="@+id/password_et"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/piction_blue"
+                android:hint="@string/username"
+                android:text="@={login.username}"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:textColorHint="@color/battleship_grey"
+                tools:ignore="Autofill,TextFields" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout"
             android:layout_width="330dp"
-            android:layout_height="32dp"
-            android:background="@color/piction_blue"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/username_et"
-            android:layout_marginTop="8dp"
-            android:hint="@string/password"
-            android:text="@={login.password}"
-            android:textSize="16sp"
-            android:singleLine="true"
-            android:textColorHint="@color/battleship_grey"
-            android:textColor="@color/black"
-            android:padding="4dp"
-            tools:ignore="Autofill,TextFields" />
+            app:layout_constraintTop_toBottomOf="@id/username_layout"
+            app:passwordToggleEnabled="true"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_et"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/piction_blue"
+                android:hint="@string/password"
+                android:singleLine="true"
+                android:text="@={login.password}"
+                android:textColor="@color/black"
+                android:textColorHint="@color/battleship_grey"
+                android:textSize="16sp"
+                tools:ignore="Autofill,TextFields,SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/login_button"
             android:layout_width="330dp"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:backgroundTint="@color/dark_blue"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/password_et"
+            app:layout_constraintTop_toBottomOf="@id/password_layout"
             android:layout_marginTop="8dp"
             android:text="@string/login"
             android:textColor="@color/white"
-            android:textSize="12sp" />
+            android:textSize="16sp"
+            android:textAllCaps="false"/>
 
         <TextView
             android:id="@+id/seperate_tv"
@@ -108,13 +128,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/login_button"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:layout_marginTop="8dp" />
 
         <Button
             android:id="@+id/website_button"
             android:layout_width="330dp"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/seperate_tv"
@@ -122,7 +142,8 @@
             android:backgroundTint="@color/dark_blue"
             android:text="@string/login_via_website"
             android:textColor="@color/white"
-            android:textSize="12sp" />
+            android:textSize="16sp"
+            android:textAllCaps="false"/>
 
         <TextView
             android:id="@+id/login_description_tv"

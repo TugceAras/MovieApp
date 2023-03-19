@@ -5,8 +5,8 @@
     <string name="the_movie_manager">The Movie Manager</string>
     <string name="this_product_uses_the_tmdb_api_but_is_not_n_endorsed_or_certified_by_tmdb">This product uses the TMDb API but is not\n endorsed or certified by TMDb</string>
     <string name="login_via_website">Login via Website</string>
-    <string name="or">OR</string>
-    <string name="login">LOGIN</string>
+    <string name="or">or</string>
+    <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="username">Username</string>
     <string name="check_username">Please enter your username!</string>
