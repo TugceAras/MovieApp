@@ -24,4 +24,7 @@ interface MovieDao {
 
     @Query("SELECT * FROM watchlistTable")
     suspend fun getWatchlistMovie():List<WatchlistModel>
+
+    @Query("DELETE FROM watchlistTable WHERE id=:watchlistId")
+    suspend fun deleteMovieFromWatchlist(watchlistId:Int)
 }

@@ -1,5 +1,6 @@
 package com.tugcearas.movieapp.ui.watchlist
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -36,6 +37,16 @@ class WatchlistScreen : Fragment() {
 
     private fun initAdapter(){
         binding.watchlistRecyclerview.adapter = watchlistAdapter
+        watchlistAdapter.onDeleteClick ={
+            AlertDialog.Builder(requireContext())
+                .setTitle("Delete Movie")
+                .setMessage("Do you want to delete this movie?")
+                .setPositiveButton("Yes"){_,_,->
+                    watchlistViewModel.deleteMovieFromWatchlist(it)
+                }
+                .setNegativeButton("Cancel",null)
+                .show()
+        }
     }
 
     private fun initObserve(){
@@ -50,5 +61,4 @@ class WatchlistScreen : Fragment() {
             findNavController().navigate(action)
         }
     }
-
 }

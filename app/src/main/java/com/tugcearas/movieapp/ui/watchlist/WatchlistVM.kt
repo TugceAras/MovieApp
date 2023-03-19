@@ -18,7 +18,12 @@ class WatchlistVM @Inject constructor(private val movieRepo: MovieRepository): V
         getWatchlists()
     }
 
-    fun getWatchlists() = viewModelScope.launch {
+    private fun getWatchlists() = viewModelScope.launch {
         getWatchlistMovies.postValue(movieRepo.getMovieToWatchlist())
+    }
+
+    fun deleteMovieFromWatchlist(watchlistId:Int) = viewModelScope.launch {
+        movieRepo.deleteMovieFromWatchlist(watchlistId)
+        getWatchlists()
     }
 }

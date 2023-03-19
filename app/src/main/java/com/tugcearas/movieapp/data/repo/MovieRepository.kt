@@ -43,4 +43,8 @@ class MovieRepository @Inject constructor(
     suspend fun getMovieToWatchlist():List<WatchlistModel>{
         return movieDb.getWatchlistMovie()
     }
+
+    suspend fun deleteMovieFromWatchlist(watchlistId:Int){
+        movieDb.deleteMovieFromWatchlist(watchlistId)
+    }
 }

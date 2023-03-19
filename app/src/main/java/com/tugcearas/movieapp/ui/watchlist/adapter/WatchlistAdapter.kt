@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tugcearas.movieapp.data.model.movie.WatchlistModel
 import com.tugcearas.movieapp.databinding.WatchlistItemBinding
 import com.tugcearas.movieapp.util.diffutil.DiffUtilCallback
+import com.tugcearas.movieapp.util.extensions.click
 
-class WatchlistAdapter :
+class WatchlistAdapter(var onDeleteClick: (Int)->Unit={}) :
 ListAdapter<WatchlistModel, WatchlistAdapter.WatchlistViewHolder>(
     DiffUtilCallback<WatchlistModel>(
         itemsTheSame = { oldItem, newItem ->
@@ -31,6 +32,9 @@ ListAdapter<WatchlistModel, WatchlistAdapter.WatchlistViewHolder>(
         fun bind(watchlistMovie:WatchlistModel) = with(binding){
             movie = watchlistMovie
             executePendingBindings()
+            deleteButton.click {
+                onDeleteClick(watchlistMovie.id)
+            }
         }
     }
 }
