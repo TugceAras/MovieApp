@@ -11,8 +11,9 @@
     <color name="light_blue">#2dc7ff</color>
     <color name="piction_blue">#00abe7</color>
     <color name="dark_blue">#1d4e89</color>
-    <color name="light_grey">#e8e9f3</color>
+    <color name="light_grey">#caccd1</color>
     <color name="dark_grey">#7c7c7c</color>
     <color name="battleship_grey">#788585</color>
     <color name="french_grey">#cecece</color>
+    <color name="space_grey">#a5acaf</color>
 </resources>

@@ -28,6 +28,7 @@
         android:layout_marginEnd="8dp"
         android:text="@string/movie_title"
         android:textSize="16sp"
+        android:textStyle="bold"
         android:textColor="@color/black"
         />
 
@@ -42,7 +43,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:textColor="@color/french_grey"
+        android:textColor="@color/battleship_grey"
         />
 
     <View

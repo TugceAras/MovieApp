@@ -33,6 +33,7 @@
             app:layout_constraintBottom_toBottomOf="@id/detail_toolbar"
             android:layout_marginStart="48dp"
             android:textSize="16sp"
+            android:textStyle="bold"
             android:textColor="@color/dark_blue"
             />
 
@@ -53,8 +54,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@id/detail_imageview"
             app:layout_constraintEnd_toEndOf="@id/detail_imageview"
-            app:layout_constraintTop_toTopOf="@id/detail_imageview"
-            android:layout_marginTop="150dp"
+            app:layout_constraintBottom_toTopOf="@id/detail_rate_icon"
+            android:layout_marginBottom="8dp"
             android:text="@{movie.title}"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -139,8 +140,8 @@
 
            <ImageButton
                android:id="@+id/detail_watchlist_button"
-               android:layout_width="32dp"
-               android:layout_height="32dp"
+               android:layout_width="48dp"
+               android:layout_height="48dp"
                android:layout_marginStart="12dp"
                android:background="@color/light_grey"
                android:src="@drawable/watchlist_icon"
@@ -151,8 +152,8 @@
 
            <ImageButton
                android:id="@+id/detail_fav_button"
-               android:layout_width="32dp"
-               android:layout_height="32dp"
+               android:layout_width="48dp"
+               android:layout_height="48dp"
                android:background="@color/light_grey"
                android:src="@drawable/fav_icon"
                app:layout_constraintBottom_toBottomOf="parent"
