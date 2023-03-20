@@ -11,7 +11,7 @@
         android:id="@+id/popular_movie_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/popular_movie"
+        android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="20sp"
@@ -33,4 +33,15 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="51dp"
         />
+
+    <ProgressBar
+        android:id="@+id/progresbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

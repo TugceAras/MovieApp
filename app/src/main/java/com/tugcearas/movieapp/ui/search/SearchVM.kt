@@ -16,6 +16,7 @@ class SearchVM @Inject constructor(private val movieRepo: MovieRepository) : Vie
     val searchNews: MutableLiveData<Resource<List<MovieModel>>> = MutableLiveData()
 
     fun searchMovies(searchQuery: String) = viewModelScope.launch {
+        searchNews.postValue(Resource.Loading())
         searchNews.postValue(handleSearchNewsResponse(movieRepo.searchMovie(searchQuery)))
     }
 

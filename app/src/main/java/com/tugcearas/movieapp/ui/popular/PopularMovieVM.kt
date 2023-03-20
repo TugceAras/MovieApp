@@ -20,6 +20,7 @@ class PopularMovieVM @Inject constructor(val repo: MovieRepository):ViewModel() 
     }
 
     private fun getPopularMovie() = viewModelScope.launch {
+        getMovies.postValue(Resource.Loading())
         getMovies.postValue(handleResponse(repo.getPopularMovie()))
     }
 

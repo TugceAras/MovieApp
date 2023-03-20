@@ -11,12 +11,14 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.tugcearas.movieapp.R
 import com.tugcearas.movieapp.data.model.movie.MovieModel
 import com.tugcearas.movieapp.databinding.FragmentSearchScreenBinding
 import com.tugcearas.movieapp.ui.search.adapter.SearchAdapter
 import com.tugcearas.movieapp.util.extensions.click
 import com.tugcearas.movieapp.util.extensions.gone
 import com.tugcearas.movieapp.util.extensions.toastMessage
+import com.tugcearas.movieapp.util.extensions.visible
 import com.tugcearas.movieapp.util.resource.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Job
@@ -57,6 +59,7 @@ class SearchScreen : Fragment() {
                 binding.cancelButton.isVisible = editable.toString().isNotEmpty()
                 delay(500L)
                 if (editable.toString().isNotEmpty()) {
+                    binding.searchRecyclerview.visible() // Makes the gone recycler view visible
                     searchViewModel.searchMovies(editable.toString())
                 }
             }
@@ -72,9 +75,14 @@ class SearchScreen : Fragment() {
                     }
                 }
                 is Resource.Error->{
+                    requireContext().toastMessage(getString(R.string.resource_error_message))
+                }
+
+                is Resource.Loading->{}
+
+                else -> {
                     requireContext().toastMessage(response.message.orEmpty())
                 }
-                else -> {}
             }
         }
     }
@@ -88,6 +96,7 @@ class SearchScreen : Fragment() {
         binding.cancelButton.click {
             with(binding){
                 cancelButton.gone()
+                searchRecyclerview.gone()
                 searchEditText.setText("")
             }
             requireView().hideKeyboard()

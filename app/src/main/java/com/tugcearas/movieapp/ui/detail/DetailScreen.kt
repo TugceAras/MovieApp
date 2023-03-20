@@ -35,13 +35,15 @@ class DetailScreen : Fragment() {
 
         with(binding){
             detailWatchlistButton.click {
+                detailWatchlistButton.setImageResource(R.drawable.watchlist_fill_icon)
                 detailViewModel.addMovieToWatchlist()
-                requireContext().toastMessage("added to watchlist")
+                requireContext().toastMessage(getString(R.string.click_watchlist_icon))
             }
 
             detailFavButton.click {
+                detailFavButton.setImageResource(R.drawable.fav_fill_icon)
                 detailViewModel.addMovieToFavorite()
-                requireContext().toastMessage("added to favorite")
+                requireContext().toastMessage(getString(R.string.click_fav_icon))
             }
 
             detailToolbar.customToolbar.setNavigationOnClickListener {
