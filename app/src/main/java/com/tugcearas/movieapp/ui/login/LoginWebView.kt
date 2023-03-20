@@ -30,11 +30,11 @@ class LoginWebView : Fragment() {
     @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.webviewProgressbar.visible()
-        with(binding.webview){
-            webViewClient = LoginWebViewClient()
-            settings.javaScriptEnabled = true
-            loadUrl(Constants.WEBVIEW_LOGIN)
+        with(binding){
+            webviewProgressbar.visible()
+            webview.webViewClient = LoginWebViewClient()
+            webview.settings.javaScriptEnabled = true
+            webview.loadUrl(Constants.WEBVIEW_LOGIN)
         }
     }
 
