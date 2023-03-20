@@ -1,4 +1,4 @@
-# <p align="center"> Movie Catalog 🎥 🍿 </p>
+# <p align="center"> Movies Catalog 🎥 🍿 </p>
 
 <!-- Screenshots -->
 ## 📸 Screenshots
