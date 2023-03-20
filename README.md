@@ -13,6 +13,14 @@
 
 <br>
 
+## 📽 Video
+<!-- Video -->
+<div align="left">
+  <video src="https://user-images.githubusercontent.com/79931228/226417765-964f13a3-801c-4f3e-a4ef-27aaac3b2a3a.mp4"/>
+</div>
+
+<br>
+
 <!-- Technologies -->
 ## :point_down: Structures Used
 - MVVM
