@@ -1,4 +1,4 @@
-package com.tugcearas.movieapp.ui.popular
+package com.tugcearas.movieapp.ui.movies
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

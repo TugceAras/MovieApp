@@ -6,7 +6,6 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
-import com.bumptech.glide.util.Util
 import com.tugcearas.movieapp.util.constants.Constants
 
 fun View.visible(){

@@ -27,4 +27,5 @@
     <string name="resource_loading">Loading…</string>
     <string name="click_watchlist_icon">Movie added to watchlist!</string>
     <string name="click_fav_icon">Movie added to favorites!</string>
+    <string name="login_successful_message">Login Successful!</string>
 </resources>

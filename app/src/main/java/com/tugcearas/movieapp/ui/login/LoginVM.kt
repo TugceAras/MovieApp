@@ -53,11 +53,11 @@ class LoginVM @Inject constructor(private val loginRepo: LoginRepository): ViewM
                     loginCallback?.onValidationSuccess()
                 }
                 else{
-                    message.postValue("Login unsuccessful!")
+                    message.postValue("Validation unsuccessful!")
                 }
             }
         } else{
-            message.postValue("Validation unsuccessful!")
+            message.postValue("Login Unsuccessful!")
         }
     }
 }

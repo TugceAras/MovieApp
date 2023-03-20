@@ -10,9 +10,11 @@ import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.navigation.fragment.findNavController
+import com.tugcearas.movieapp.R
 import com.tugcearas.movieapp.databinding.FragmentLoginWebViewBinding
 import com.tugcearas.movieapp.util.constants.Constants
 import com.tugcearas.movieapp.util.extensions.gone
+import com.tugcearas.movieapp.util.extensions.toastMessage
 import com.tugcearas.movieapp.util.extensions.visible
 
 class LoginWebView : Fragment() {
@@ -57,6 +59,7 @@ class LoginWebView : Fragment() {
             if(url?.startsWith(Constants.WEBVIEW_DASHBOARD) == true){
                 val action = LoginWebViewDirections.actionLoginWebViewToPopularMovieScreen()
                 findNavController().navigate(action)
+                requireContext().toastMessage(getString(R.string.login_successful_message))
             }
         }
     }

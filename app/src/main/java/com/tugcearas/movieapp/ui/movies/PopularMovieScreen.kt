@@ -1,4 +1,4 @@
-package com.tugcearas.movieapp.ui.popular
+package com.tugcearas.movieapp.ui.movies
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import com.tugcearas.movieapp.R
 import com.tugcearas.movieapp.data.model.movie.MovieModel
 import com.tugcearas.movieapp.databinding.FragmentPopularMovieScreenBinding
-import com.tugcearas.movieapp.ui.popular.adapter.PopularMovieAdapter
+import com.tugcearas.movieapp.ui.movies.adapter.PopularMovieAdapter
 import com.tugcearas.movieapp.util.extensions.gone
 import com.tugcearas.movieapp.util.extensions.toastMessage
 import com.tugcearas.movieapp.util.extensions.visible

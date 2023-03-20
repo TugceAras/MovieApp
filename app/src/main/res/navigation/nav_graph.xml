@@ -86,7 +86,7 @@
     </fragment>
     <fragment
         android:id="@+id/popularMovieScreen"
-        android:name="com.tugcearas.movieapp.ui.popular.PopularMovieScreen"
+        android:name="com.tugcearas.movieapp.ui.movies.PopularMovieScreen"
         android:label="fragment_popular_movie_screen"
         tools:layout="@layout/fragment_popular_movie_screen" >
         <action

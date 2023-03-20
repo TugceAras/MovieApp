@@ -1,4 +1,4 @@
-package com.tugcearas.movieapp.ui.popular.adapter
+package com.tugcearas.movieapp.ui.movies.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

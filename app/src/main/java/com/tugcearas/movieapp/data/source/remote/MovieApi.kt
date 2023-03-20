@@ -3,7 +3,6 @@ package com.tugcearas.movieapp.data.source.remote
 import com.tugcearas.movieapp.data.model.login.CreateTokenModel
 import com.tugcearas.movieapp.data.model.login.ValidationRequestModel
 import com.tugcearas.movieapp.data.model.login.ValidationResponseModel
-import com.tugcearas.movieapp.data.model.movie.MovieModel
 import com.tugcearas.movieapp.data.model.movie.Movies
 import com.tugcearas.movieapp.util.constants.Constants
 import retrofit2.Response
