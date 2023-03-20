@@ -34,7 +34,8 @@ class MainActivity : AppCompatActivity() {
                     binding.bottomNavView.gone()
                     window.statusBarColor = ContextCompat.getColor(this, R.color.light_blue)
                 }
-                R.id.detailScreen->{
+                R.id.detailScreen,
+                R.id.loginWebView->{
                     binding.bottomNavView.gone()
                     window.statusBarColor = ContextCompat.getColor(this, R.color.light_grey)
                 }

@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import com.tugcearas.movieapp.R
-import com.tugcearas.movieapp.data.model.movie.MovieModel
 import com.tugcearas.movieapp.databinding.FragmentDetailScreenBinding
 import com.tugcearas.movieapp.util.extensions.click
 import com.tugcearas.movieapp.util.extensions.toastMessage

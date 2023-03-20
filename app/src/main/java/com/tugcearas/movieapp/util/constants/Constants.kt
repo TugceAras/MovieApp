@@ -8,4 +8,6 @@ object Constants {
     const val SEARCH_MOVIE = "3/search/movie"
     const val POPULAR_MOVIE = "3/movie/popular"
     const val IMAGE_URL = "https://image.tmdb.org/t/p/w500/"
+    const val WEBVIEW_LOGIN = "https://www.themoviedb.org/login"
+    const val WEBVIEW_DASHBOARD = "https://www.themoviedb.org/u/"
 }

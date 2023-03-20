@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.tugcearas.movieapp.R
 import com.tugcearas.movieapp.data.model.movie.MovieModel
 import com.tugcearas.movieapp.databinding.PopularMovieItemBinding
 import com.tugcearas.movieapp.util.constants.Constants

@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.navigation.Navigation
 import com.tugcearas.movieapp.data.model.login.CreateTokenModel
 import com.tugcearas.movieapp.data.model.login.ValidationRequestModel
 import com.tugcearas.movieapp.data.model.login.ValidationResponseModel

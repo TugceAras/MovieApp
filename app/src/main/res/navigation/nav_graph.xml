@@ -26,6 +26,11 @@
             app:destination="@id/popularMovieScreen"
             app:popUpTo="@id/loginScreen"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginScreen_to_loginWebView"
+            app:destination="@id/loginWebView"
+            app:popUpTo="@id/loginScreen"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/searchScreen"
@@ -88,5 +93,16 @@
             android:id="@+id/action_popularMovieScreen_to_searchScreen"
             app:destination="@id/searchScreen"
             />
+    </fragment>
+    <fragment
+        android:id="@+id/loginWebView"
+        android:name="com.tugcearas.movieapp.ui.login.LoginWebView"
+        android:label="fragment_login_web_view"
+        tools:layout="@layout/fragment_login_web_view" >
+        <action
+            android:id="@+id/action_loginWebView_to_popularMovieScreen"
+            app:destination="@id/popularMovieScreen"
+            app:popUpTo="@id/loginWebView"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
