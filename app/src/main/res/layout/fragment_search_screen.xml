@@ -54,7 +54,7 @@
             app:layout_constraintEnd_toStartOf="@+id/cancel_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields" />
 
         <ImageButton
             android:id="@+id/clear_button"
@@ -66,7 +66,7 @@
             app:layout_constraintBottom_toBottomOf="@id/search_edit_text"
             app:layout_constraintEnd_toEndOf="@id/search_edit_text"
             app:layout_constraintTop_toTopOf="@id/search_edit_text"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/cancel_button"
